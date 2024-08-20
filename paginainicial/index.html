@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina inicial</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+
+<body>
+    <aside>
+        <span class="movlogo">
+            <img class="logoprincipal" src="../assets/logopadrao.svg" style="width: 10rem; margin: 2rem;"
+                alt="imagm da logo ">
+
+        </span>
+    </aside>
+
+    <main>
+        <div class="buttonsprinc">
+            <button id="manutencao" class="manutencao">MANUTENÇÃO</button>
+            <button id="novameta" class="novameta"> NOVA META</button>
+            <button id="excluirmeta" class="excluirmeta">EXCLUIR META</button>
+
+        </div>
+
+        <div class="container">
+            <div class="box">
+                <span class="topico1">
+                    <button onclick="selectAno()" id="ano" class="ano">ANO</button>
+                    <div id="popupano" class="popupano">
+                        <div class="cardano" id="2024">2024</div>
+                        <div class="cardano" id="2023">2023</div>
+                        <div class="cardano" id="2022">2022</div>
+                        <div class="cardano" id="2021">2021</div>
+                        <div class="cardano" id="2020">2020</div>
+                        <div class="cardano" id="2019">2019</div>
+                    </div>
+
+
+                </span>
+                <span class="topico2">
+                    <button onclick="selectMes()" class="mes" id="mes">MÊS</button>
+                    <div id="popupmes" class="popupmes">
+                        <div class="cardmes" id="JANEIR">JANEIR</div>
+                        <div class="cardmes" id="FEVEREIRO">FEVEREIRO</div>
+                        <div class="cardmes" id="MARÇO">MARÇO</div>
+                        <div class="cardmes" id="ABRIL">ABRIL</div>
+                        <div class="cardmes" id="MAIO">MAIO</div>
+                        <div class="cardmes" id="mes">JUNHO</div>
+                        <div class="cardmes" id="mes">JULHO</div>
+                        <div class="cardmes" id="mes">AGOSTO</div>
+                        <div class="cardmes" id="mes">SETEMBRO</div>
+                        <div class="cardmes" id="mes">OUTUBRO</div>
+                        <div class="cardmes" id="mes">NOVEMBRO</div>
+                        <div class="cardmes" id="mes">DEZEMBRO</div>
+
+                    </div>
+                </span>
+            </div>
+
+        </div>
+
+    </main>
+
+    <button id="sair"  onclick="abrirPopupSaur()" class="sair">SAIR</button>
+
+    <div class="popupsair" id="popupsair" style="display: none;">
+        <div class="opcoes">
+            <h3>Tem certeza ?</h3>
+            <span class="op">
+                <div id="confirm" class="pt1">Sim</div>
+                <div id="cancel" class="pt2">Não</div>
+            </span>
+
+        </div>
+    </div>
+
+    <script src="../index.js"></script>
+</body>
+
+</html>

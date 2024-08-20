@@ -1,0 +1,336 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+aside {
+    position: absolute;
+}
+
+.buttonsprinc {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -16rem;
+}
+
+.manutencao,
+.novameta,
+.excluirmeta {
+    border: none;
+    background-color: #82342C;
+    color: white;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 0.5rem;
+    margin-left: 15px;
+    box-shadow: 1px 0px 2px 0px #5f5f5f;
+
+
+}
+
+.container {
+    width: 70%;
+    height: 60vh;
+    position: absolute;
+    top: 13rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #82342C;
+    box-shadow: 0px 0px 10px 5px #4d1711 inset;
+
+}
+
+.box {
+    width: 95%;
+    height: 50vh;
+    background-color: white;
+    text-align: center;
+    overflow: hidden;
+    padding: 2rem 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.ano,
+.mes {
+    width: 10rem;
+    border: none;
+    background-color: #82342C;
+    color: white;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 0.3rem;
+    margin: 0rem 10rem 0rem 10rem;
+    box-shadow: 1px 0px 2px 0px #5f5f5f;
+}
+
+/* sair */
+
+.sair {
+    width: 7rem;
+    border: none;
+    background-color: #82342C;
+    color: white;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 0.5rem;
+    margin-left: 15px;
+    box-shadow: 1px 0px 2px 0px #5f5f5f;
+    position: relative;
+    top: -3rem;
+}
+
+/* popup */
+
+.popupano {
+    width: 10rem;
+    background-color: #82342C;
+    display: none;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.cardano {
+    background-color: white;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.2rem;
+
+}
+
+.ano {
+    position: relative;
+    top: -10.4rem;
+}
+
+.topico1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25rem;
+    overflow: hidden;
+
+
+}
+
+/* popupmes */
+.popupmes {
+    width: 10rem;
+    background-color: #82342C;
+    height: 31vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    display: none;
+
+
+
+}
+
+.cardmes {
+    background-color: white;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.2rem;
+
+}
+
+.mes {
+    position: relative;
+    top: -10.4rem;
+
+}
+
+.topico2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25rem;
+    overflow: hidden;
+
+
+}
+
+.popupano,
+.popupmes {
+    height: 30vh;
+}
+
+/* popup sair opções */
+
+
+/* Estilo geral para o popup */
+.popupsair {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Certifique-se de que está acima de outros elementos */
+}
+
+/* Estilo para o contêiner do popup */
+.opcoes {
+    background: #fff; /* Fundo branco para o popup */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px; /* Largura do popup */
+}
+
+/* Estilo para o título */
+.opcoes h3 {
+    margin: 0 0 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Estilo para o contêiner das opções */
+.opcoes .op {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Estilo para os botões de opção */
+.opcoes .op .pt1, .opcoes .op .pt2 {
+    background: #007bff; /* Cor de fundo dos botões */
+    color: #fff; /* Cor do texto dos botões */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+/* Estilo para os botões de opção ao passar o mouse */
+.opcoes .op .pt1:hover, .opcoes .op .pt2:hover {
+    background: #0056b3;
+}
+
+/* Estilo para o botão "Não" */
+.opcoes .op .pt2 {
+    background: #dc3545; /* Cor de fundo para o botão "Não" */
+}
+
+/* Estilo para o botão "Não" ao passar o mouse */
+.opcoes .op .pt2:hover {
+    background: #c82333;
+}
+
+
+
+@media (max-width: 1006px) {
+
+    .topico1,
+    .topico2 {
+        margin: 0;
+        width: 15rem;
+    }
+
+    .popupano,
+    .popupmes {
+        height: 13vh;
+    }
+}
+
+@media (max-width: 2006px) {
+
+    .topico1,
+    .topico2 {
+        margin: 0;
+        width: 15rem;
+    }
+
+    .popupano,
+    .popupmes {
+        height: 30vh;
+    }
+}
+@media (max-width: 900px){
+    .container{
+        width: 95%;
+    }
+
+    aside{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+ 
+
+
+
+}
+
+@media (max-height: 721px) {
+    .buttonsprinc {
+        top: -12rem;
+    }
+
+    
+
+}
+
+/* altura */
+
+
+@media (min-height: 845px) {
+    .buttonsprinc {
+        top: -20rem;
+    }
+
+
+    .topico1,
+    .topico2 {
+        margin: 0;
+        height: 100vh;
+    }
+}
+
+@media (min-height: 966px) {
+    .buttonsprinc {
+        top: -23rem;
+    }
+
+
+}
+
+@media (min-height: 1048px) {
+    .buttonsprinc {
+        top: -27rem;
+    }
+
+
+}

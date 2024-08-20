@@ -1,97 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <title>Login Form</title>
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/index.css">
 </head>
 
 <body>
-    <div id="geral">
-        <div class="bola1"></div>
-        <div class="bola2"></div>
 
-        <div class="fiel">
-            <span>
-                <img class="logo1" src="img-login/Nossa Logo.svg" alt="">
-            </span>
+    <main>
 
-            <h2 class="tema">bem-vindo</h2>
+        <form method="post" class="container" onsubmit="return validateLogin()">
+            <img class="logo" src="assets/logopadrao.svg" alt="imagem da logo">
+    
+            <input class="inputs" type="text" name="login" id="login" placeholder="Login" required>
+            <input class="inputs" type="password" name="password" id="password" placeholder="Senha" required>
+    
+            <button type="submit" class="but">Entrar</button>
+        </form>
 
-            <label for="email" class="nome">Email</label>
-            <br>
-            <input type="email" class="imp" name="email" id="email" placeholder="Entre com seu Email" required
-                autocomplete="email" autofocus style="padding: 15px;" />
-            <br>
-            <br>
-            <br>
-
-            <label for="password" class="nome">
-                Senha
-            </label>
-            <br>
-            <input type="password" class="imp" name="pass" id="pass" placeholder="***********" required
-                style="padding: 15px;" />
-            <i id="olho" class="bi bi-eye-fill"></i>
-            <br>
-            <br>
-
-            <input type="checkbox" name="lembrar_senha" id="lembrar_senha" />
-            <label class="lembrar_senhaa" for="lembrar_senha">Lembrar senha</label>
-
-            <strong>
-                <a class="esqueceu1" href="#" id="login" name="login">
-                    Esqueceu a senha?
-                </a>
-            </strong>
-            <br>
-            <br>
-            <button id="login" onclick="manipulaLogin()" class="login">
-                Login
-            </button>
-
-            <br> <br>
-
-            <a href="#">
-                <button id="func" class="google">
-                    <svg class="gg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="25"
-                        viewBox="0 0 45 45">
-
-                    </svg>
-                    <span class="g"> Entrar com o google</span>
-                </button>
-            </a>
-            <br>
-
-            <p class="cadastro">
-                Ainda não tem conta?
-                <strong>
-                    <a href="#" class="cadastro a">
-                        Criar uma
-                    </a>
-                </strong>
-            </p>
-        </div>
-
-        <div class="bola3"></div>
-        <div class="bola4"></div>
-    </div>
-
-    <script>
-        function manipulaLogin() {
-            let UsuarioValido = 'usuario';
-            let SenhaValida = 'usuario';
-
-            if (UsuarioValido === 'usuario' || SenhaValida === 'usuario') {
-                window.location.href = "/Principal";
-            } else {
-                alert('Usuário ou senha inválida');
-            }
-        }
-    </script>
+    </main>
+    <script src="index.js"></script>
 </body>
 
 </html>
